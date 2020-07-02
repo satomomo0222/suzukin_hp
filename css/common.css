@@ -1,0 +1,221 @@
+body{
+  background-color: white;
+  font-size: 12px;
+  color :black;
+}
+.container{
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  margin:50px auto;
+  width:80%;
+  max-width:1000px;
+}
+
+
+/* 共通ヘッダー部分*/
+
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height:80px;
+  width:100%;
+  background-color: white;
+}
+.header-left{
+  display: flex;
+}
+.header-left-logo{
+  background-color: black;
+  height:80px;
+  width:200px;
+}
+.header-left-list ul{
+  display: flex;
+  align-items: center;
+  height:100%;
+  margin:0 50px;
+}
+.header-left-list li{
+  margin:0 20px;
+}
+.header-right{
+  display: flex;
+}
+.header-right-btn{
+  align-items: center;
+  transform: translateY(2px);
+}
+.header-right-btn a{
+  background-color: 	#998675;
+  color: white;
+  letter-spacing: 1px;
+  padding: 8px;
+  border-radius: 2px;
+  transition: opacity .3s;
+}
+.header-right-btn a:hover{
+  opacity:0.7;
+
+}
+.header-right-btn small{
+  font-size: 8px;
+  letter-spacing: 0;
+}
+.header-right-btn i{
+  font-size: 20px;
+  transform: translateY(1px) scaleY(0.8);
+  margin-right:3px
+}
+.header-right-tel, .header-right-mail{
+  margin-left:15px;
+  align-items: center;  
+  transition: opacity .4s;
+}
+.header-right-tel:hover, .header-right-mail:hover{
+  opacity: 0.7;
+}
+.header-right-tel i,.header-right-mail i{
+  font-size: 16px;
+  color: #998675;
+  line-height: 30px;
+}
+
+/* ヘッダーレスポンシブ */
+
+/* ハンバーガーメニュー */
+.gmenu{
+  width:70px;
+  height:100px;
+  position:fixed;
+  top:0;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  right:10%;
+  background-color: white;
+  z-index:500;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+.gmenu span{
+  display: block;
+  height:1px;
+  width:28px;
+  background:black;
+  position:absolute;
+  top:70px;
+  left:50%;
+  margin-left:-14px;
+}
+.top{
+  animation: menu-top 0.6s forwards;
+}
+.btm{
+  animation: menu-btm 0.6s forwards;
+}
+.-open .top{
+  animation: menu-top-open 0.6s forwards;
+}
+.-open .btm{
+  animation: menu-btm-open 0.6s forwards;
+}
+.gnav {
+  position: fixed;
+  top: 0;
+  left: -100px;
+  height: 100%;
+  z-index: 40;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #FFF;
+  width: 0%;
+  transform: skewX(-10deg);
+  transition: width ease-in-out 0.8s, transform ease-in-out 0.8s, left ease-in-out 0.8s;
+}
+.gnav.-open{
+  left:0;
+  width: 100%;
+  transform: skewX(0deg);
+}
+.gnav-list {
+  font-size: 16px;
+}
+.gnav.-open .gnav-list li {
+  opacity: 1;
+  transform: translateX(0px);
+}
+.gnav-list li {
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: all .3s;
+}
+.gnav-list li a {
+  display: block;
+  padding: 15px 15px 15px 30px;
+  position: relative;
+}
+.gnav-list li a:before {
+  width: 16px;
+  height: 1px;
+  background: #998675;
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 50%;
+}
+.gnav-list li a span {
+  color:gray;
+  transform: translateX(0px);
+  display: inline-block;
+  transition: transform .6s, color .2s;
+}
+.gnav.-open .gnav-list li a:hover span{
+  color:#998675;
+  transform: translateX(20px);
+}
+
+/* 予約ボタン */
+
+.header-right-btn-responsive{
+  z-index:30;
+}
+.header-right-btn-responsive a{
+  display: none;
+  background-color: #998675;
+  color:white;
+  position: fixed;
+  top:0;
+  right:10%;
+  margin-right:70px;
+  text-align: center;
+  width:70px;
+  height:100px;
+}
+
+.header-right-btn-responsive i{
+  font-size:30px;
+  transform: scaleY(0.8);
+  margin-top:50px;
+}
+
+
+/* フッター */
+footer{
+  width:100%;
+  display: flex;
+  justify-content: center;
+  margin-top:400px;
+  margin-bottom: 50px;
+}
+.footer-tel i,.footer-mail i{
+  font-size: 24px;
+  color: #998675;
+  margin:10px;
+}

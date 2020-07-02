@@ -1,0 +1,78 @@
+@media(max-width:1050px){
+
+  /* ヘッダー */
+  .container{
+    margin:20px auto;
+  }
+  .header-left-list{
+    display:none;
+  }
+  .header-right-btn,.header-right-tel,.header-right-mail{
+    display:none;
+  }
+  .gmenu{
+    display:flex;
+  }
+  .header-right-btn-responsive a{
+    display: block;
+  }
+
+/* Data付近調整 */
+  .data-content{
+    flex-direction: column;
+    justify-content: unset;
+    align-items: center;
+  }
+.data-text{
+  width:100%;
+  margin-bottom: 50px;
+  margin-left: 20%;
+}
+
+.data-map{
+  width:156%;
+  height:auto;
+  transform: translateX(-10%);
+  height:100%;
+}
+.ggmap iframe,
+.ggmap object,
+.ggmap embed {
+height: 500px;
+}
+.data-img{
+  margin-top:100px;
+}
+
+}
+@media(max-width:600px){
+  .container{
+    width:90%;
+  }
+  .gmenu{
+    right:5%;
+  }
+  .header-right-btn-responsive a{
+    right:5%;
+  }
+  .data-text{
+    margin-left: 0;
+  }
+  .main-message{
+    font-size:20px;
+  }
+  .concept p{
+    font-size: 12px;
+  }
+
+  .data-text{
+    font-size: 12px;
+  }
+  .data-text-name{
+    font-size: 20px;
+  }
+  .data-map{
+    width:140%;
+    height:300px;
+  }
+}
