@@ -6,6 +6,7 @@ body{
 .container{
   display:flex;
   justify-content: center;
+  align-items:center;
   flex-direction: column;
   margin:50px auto;
   width:80%;
@@ -40,6 +41,32 @@ header{
 .header-left-list li{
   margin:0 20px;
 }
+.header-left-list li a:hover{
+  opacity:0.7;
+}
+.header-left-list li a{
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+.header-left-list li a::after{
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 1px;
+  background: #333;
+  transform: scale(0, 1);
+  transform-origin: right top;
+  transition: transform .3s;
+}
+.header-left-list li a:hover::after {
+  transform-origin: left top;
+  transform: scale(1, 1);
+}
+
+
 .header-right{
   display: flex;
 }
@@ -55,9 +82,8 @@ header{
   border-radius: 2px;
   transition: opacity .3s;
 }
-.header-right-btn a:hover{
+.header-right-btn a:hover,footer i:hover{
   opacity:0.7;
-
 }
 .header-right-btn small{
   font-size: 8px;
@@ -82,8 +108,61 @@ header{
   line-height: 30px;
 }
 
-/* ヘッダーレスポンシブ */
+/* セクションタイトル */
+.section{
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.section-title{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 70px;
+}
+.title{
+  font-size: 22px;
+  text-align: center;
+}
+.section-title-border1{
+  margin:7px auto;
+  content:"";
+  height:1px;
+  width:150px;
+  background-color:black;
+}
+.section-title-border2{
+  margin:0 auto;
+  content:"";
+  height:1px;
+  width:110px;
+  background-color:black;
+}
+.subtitle{
+  font-size: 16px;
+  text-align: center;
+  margin-top: 5px;
+}
 
+/* フッター */
+footer{
+  width:100%;
+  display: flex;
+  justify-content: center;
+  margin-top:400px;
+  margin-bottom: 50px;
+}
+.footer-tel i,.footer-mail i{
+  font-size: 24px;
+  color: #998675;
+  margin:10px;
+  transition: opacity .3s;
+}
+
+
+
+/* レスポンシブ */
+/* ヘッダー */
 /* ハンバーガーメニュー */
 .gmenu{
   width:70px;
@@ -144,7 +223,8 @@ header{
   transform: skewX(0deg);
 }
 .gnav-list {
-  font-size: 16px;
+  font-size: 30px;
+  line-height: 50px;
 }
 .gnav.-open .gnav-list li {
   opacity: 1;
@@ -206,16 +286,5 @@ header{
 }
 
 
-/* フッター */
-footer{
-  width:100%;
-  display: flex;
-  justify-content: center;
-  margin-top:400px;
-  margin-bottom: 50px;
-}
-.footer-tel i,.footer-mail i{
-  font-size: 24px;
-  color: #998675;
-  margin:10px;
-}
+
+

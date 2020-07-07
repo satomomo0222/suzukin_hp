@@ -1,5 +1,7 @@
-@media(max-width:1050px){
+/* タブレット */
 
+@media(max-width:1050px){
+/* 共通ページ */
   /* ヘッダー */
   .container{
     margin:20px auto;
@@ -17,6 +19,13 @@
     display: block;
   }
 
+
+  .gnav-list {
+    font-size: 26px;
+    line-height: 32px;
+  }
+/* トップページ */
+
 /* Data付近調整 */
   .data-content{
     flex-direction: column;
@@ -31,30 +40,48 @@
 
 .data-map{
   width:156%;
-  height:auto;
   transform: translateX(-10%);
   height:100%;
+  padding-bottom:400px;
 }
 .ggmap iframe,
 .ggmap object,
 .ggmap embed {
-height: 500px;
+height: 400px;
 }
 .data-img{
   margin-top:100px;
 }
 
+
+/* ルームページ */
+header{
+  border-bottom: none;
 }
+
+
+}
+
+
+/* スマホ */
 @media(max-width:600px){
+  /* 共通ページ */
   .container{
     width:90%;
   }
   .gmenu{
     right:5%;
   }
+  .gnav-list {
+    font-size: 16px;
+    line-height: 6px;
+  }
   .header-right-btn-responsive a{
     right:5%;
   }
+
+
+  /* トップページ */
   .data-text{
     margin-left: 0;
   }
