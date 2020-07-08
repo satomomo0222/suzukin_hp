@@ -1,6 +1,10 @@
+*{
+  font-family: 'Noto Serif JP', serif;
+}
+
 body{
   background-color: white;
-  font-size: 12px;
+  font-size: 13px;
   color :black;
 }
 .container{
