@@ -5,6 +5,7 @@
 });
 
 
+// ビデオのミュート操作
 var video = document.getElementById('video');
 
 $('.sound-btn').on('click', function(){
@@ -18,11 +19,16 @@ $('.sound-btn').on('click', function(){
   }
 });
 
-// var mute = document.getElementById('mute');
-// mute.addEventListener('click', function () {
-//     if(video.muted){
-//         video.muted = false;
-//     }else{
-//         video.muted = true;
-//     }
-// });
+// fadein
+$(window).scroll(function(){
+  $('.fadein').each(function(){
+    var elemPos = $(this).offset().top,
+        scroll = $(window).scrollTop(),
+        windowHeight = $(window).height();
+    if (scroll > elemPos - windowHeight + 100){
+      $(this).addClass('scrollin');
+    } else {
+      $(this).removeClass('scrollin');
+    }
+  });
+});
