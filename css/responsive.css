@@ -18,12 +18,11 @@
   .header-right-btn-responsive a{
     display: block;
   }
-
-
   .gnav-list {
     font-size: 26px;
     line-height: 32px;
   }
+
 /* トップページ */
 
 /* Data付近調整 */
@@ -70,17 +69,41 @@ header{
   }
   .gmenu{
     right:5%;
+    width:50px;
+    height:60px;
+  }
+  .gmenu span{
+    top:40px;
   }
   .gnav-list {
     font-size: 16px;
     line-height: 6px;
   }
-  .header-right-btn-responsive a{
-    right:5%;
+
+  .header-left-logo{
+    width: 130px;
+    height: 60px;
+    transform: translateY(-20px);
   }
 
+  .header-right-btn-responsive a{
+    right:5%;
+    margin-right:50px;
+    width:50px;
+    height:60px;
+    font-size:8px;
+  }
+  .header-right-btn-responsive i{
+    font-size:20px;
+    margin-top:24px;
+    margin-bottom: 1px;
+  }
 
   /* トップページ */
+  .movie-section{
+    margin-top: 30px;
+    margin-bottom:60px;
+  }
   .data-text{
     margin-left: 0;
   }
